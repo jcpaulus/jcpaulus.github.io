@@ -138,3 +138,27 @@ body{font-family: 'Montserrat', sans-serif;}
 #bio-data table tr td:nth-child(2) {
     width: 300px;
 }
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;      /* bikin bulat */
+    float: left;
+    margin-right: 20px;
+}
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;      /* bikin bulat */
+    float: left;
+    margin-right: 20px;
+}
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;      /* bikin bulat */
+    float: left;
+    margin-right: 20px;
+}
