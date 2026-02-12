@@ -1,98 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CV Using HTML & CSS</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   
-<div id="page">
-    <div class="photo-and-name">
-        <img src="profile.png" class="photo" alt="Profile Picture">
-        <div class="contact-info-box">
-            <h1 class="name">Muhammad Owais</h1>
-            <br>
-            <h3 class="job-title">IT Manager</h3>
-            <p class="contact-details">Phone: +92-344-4XX3-1XX &nbsp; - &nbsp; Email: contact@muhammadovi.com</p>
-        </div>
-    </div>
-    <div id="objective">
-        <h3>Objective</h3>
-        <p>
-            To take a challenging and managerial role in the field of Computer programming and implement the expertise and experience gained in this field to develop complex project with efficiency and quality. 
-        </p>
-    </div>
-    <div id="education">
-        <h3>Education</h3>
-        <table>
-            <tr class="school-1">
-                <td rowspan="2">2002 - 2015</td>
-                <td><b>School-1</b>: ABC School (Standard KG-VIII)</td>
-            </tr>
-            <tr class="school-2">
-                <td><b>School-2</b>: XYZ School (Standard IX-X)</td>
-            </tr>
-            
-            <tr class="school-1">
-                <td rowspan="2">2012 - 2014</td>
-                <td><b>ACCESS</b>: English Micro Scholarship Program by US Consolate</td>
-            </tr>
-            <tr class="school-2">
-                <td><b>The Professional's Academy</b>: Web Designing (HTML, CSS, JS, Bootstrap)</td>
-            </tr>
-            
-            <tr>
-                <td style="width: 120px; color: gray;">2015 - 2017</td>
-                <td><b>Intermediate</b>: Board of Intermediate Karachi - Private</td>
-            </tr>
-        </table>
-    </div>
-    <div id="work">
-        <h3>Experience</h3>
-        <table>
-            <tr class="work-1">
-                <td>2014 - 2015</td>
-                <td><b>ABC Corp</b>: As an IT Manager and Call Service Representative</td>
-            </tr>
-            <tr class="work-2">
-                <td>2015 - Present</td>
-                <td><b>Reliable Punching</b>: More than 2 years' experience as an IT Manager and Customer Service Representative</td>
-            </tr>
- 
-        </table>
-    </div>
-    <div id="bio-data">
-        <h3>Bio-Data</h3>
-        <table>
-            <tr>
-                <td>F'Name:</td>
-                <td><b>Naseem Akhter</b></td>
-            </tr>
-            <tr>
-                <td>Date of Birth:</td>
-                <td><b>25<sup>th</sup> November 1996</b></td>
-            </tr>
-            <tr>
-                <td>CNIC:</td>
-                <td><b>42401-XXXXXXX-7</b></td>
-            </tr>
-            <tr>
-                <td>Religion:</td>
-                <td><b>Islam</b></td>
-            </tr>
-            <tr>
-                <td>Nationality:</td>
-                <td><b>Pakistani</b></td>
-            </tr>
-            <tr>
-                <td>Marital Status:</td>
-                <td><b>Unmarried</b></td>
-            </tr>
-        </table>
-    </div>
-</div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johanes Christian Paulus — CV</title>
 
+  <!-- Use your existing CSS file (already in your repo) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fallback styling (keeps it readable even if style.css is different) -->
+  <style>
+    :root { --text:#111; --muted:#555; --line:#e5e5e5; --bg:#fff; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); margin: 0; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 18px 60px; }
+    .header { display: flex; gap: 18px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .photo { width: 96px; height: 96px; border-radius: 14px; object-fit: cover; border: 1px solid var(--line); }
+    h1 { margin: 0; font-size: 28px; letter-spacing: .2px; }
+    .subtitle { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+    .contact { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px 14px; font-size: 13px; color: var(--muted); }
+    .contact a { color: inherit; text-decoration: underline; }
+    .grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 22px; margin-top: 22px; }
+    @media (max-width: 860px){ .grid { grid-template-columns: 1fr; } }
+    .section { padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .section:last-child { border-bottom: none; }
+    h2 { margin: 0 0 10px; font-size: 16px; text-transform: uppercase; letter-spacing: .9px; }
+    .p { margin: 0; color: var(--text); font-size: 14px; line-height: 1.55; }
+    .muted { color: var(--muted); }
+    .item { margin-top: 12px; }
+    .item:first-child { margin-top: 0; }
+    .role { font-weight: 700; font-size: 14px; margin: 0; }
+    .meta { margin: 4px 0 0; font-size: 13px; color: var(--muted); }
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; font-size: 14px; line-height: 1.45; }
+    .pill { display: inline-block; padding: 6px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; margin: 6px 6px 0 0; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <div class="header">
+      <!-- Uses your existing image file in the repo -->
+      <img class="photo" src="profile.png" alt="Profile photo" />
+      <div>
+        <h1>Johanes Christian Paulus</h1>
+        <p class="subtitle">Entrepreneurship & Innovation (M.S. Candidate) • Growth Marketing • Education Content</p>
+
+        <div class="contact">
+          <span><b>Email:</b> <a href="mailto:jchristianpaulus@gmail.com">jchristianpaulus@gmail.com</a></span>
+          <span><b>Phone:</b> +62 8468-2755</span>
+          <span><b>LinkedIn:</b> <a href="https://linkedin.com/in/johanespaulus/" target="_blank" rel="noopener">linkedin.com/in/johanespaulus</a></span>
+          <span><b>Location:</b> San Francisco, CA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <div>
+
+        <!-- SUMMARY -->
+        <div class="section">
+          <h2>Summary</h2>
+          <p class="p">
+            Passionate about entrepreneurship and creative storytelling with hands-on experience as a local educational content creator.
+            Skilled in growth marketing, content strategy, and audience engagement through educational campaigns that reached thousands of learners.
+          </p>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section">
+          <h2>Experience</h2>
+
+          <div class="item">
+            <p class="role">Educational Support & Marketing — Titik Nol EC</p>
+            <p class="meta">Kediri, Indonesia • Jan 2025 – Jul 2025</p>
+            <ul>
+              <li>Developed innovative learning methods that increased student engagement and satisfaction.</li>
+              <li>Created educational and promotional content on TikTok and hosted interactive live commerce sessions to market learning products.</li>
+              <li>Boosted brand visibility with 25,000+ total likes and ~2,000 average viewers per campaign, achieving 1,200%+ engagement rate.</li>
+              <li>Strengthened audience connection through consistent storytelling and student-centered engagement.</li>
+              <li>Mentored students through scholarship application processes (essays, interviews, and strategy).</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <p class="role">Founder — Siswahub</p>
+            <p class="meta">Bandung, Indonesia • Dec 2022 – Dec 2023</p>
+            <ul>
+              <li>Founded and managed an education-focused social enterprise empowering youth through accessible learning and digital literacy.</li>
+              <li>Led a campaign project involving 205 participants, reaching 100,000+ people across Indonesia.</li>
+              <li>Designed and facilitated a free digital skills bootcamp for 15 participants, improving employability and tech confidence.</li>
+              <li>Recruited and coached 30 interns, providing mentorship and leadership development opportunities.</li>
+              <li>Built partnerships with educational institutions and non-profit organizations to scale community learning impact.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- LEADERSHIP / ACTIVITIES -->
+        <div class="section">
+          <h2>Leadership & Activities</h2>
+
+          <div class="item">
+            <p class="role">Secretary — Management Student Association</p>
+            <p class="meta">University of Sam Ratulangi • Indonesia</p>
+            <ul>
+              <li>Coordinated student programs and events.</li>
+              <li>Led an entrepreneurship mentoring program involving 40 mentors and ~300 mentees, collaborating with two partner institutions.</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <p class="role">Academic & Debate Recognitions</p>
+            <ul>
+              <li>Top 5 — Provincial Scientific Article Competition</li>
+              <li>2nd–3rd Place — Debate Championships at city and provincial levels</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+          <h2>Education</h2>
+
+          <div class="item">
+            <p class="role">University of San Francisco — School of Management</p>
+            <p class="meta">San Francisco, CA • Expected May 2026</p>
+            <p class="p"><b>Master of Science</b> in Entrepreneurship and Innovation</p>
+            <p class="p muted" style="margin-top:8px;">
+              • LPDP (Indonesia Endowment Fund for Education) Government Scholarship Awardee (academic excellence & social impact leadership)
+            </p>
+          </div>
+
+          <div class="item" style="margin-top:14px;">
+            <p class="role">University of Sam Ratulangi</p>
+            <p class="meta">Indonesia • Jul 2021</p>
+            <p class="p"><b>Bachelor of Science</b> in Economics • GPA: 3.74</p>
+            <p class="p muted" style="margin-top:8px;">• Bidikmisi (National Full Scholarship Recipient)</p>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+          <h2>Skills</h2>
+          <div>
+            <span class="pill">Growth Marketing</span>
+            <span class="pill">Content Strategy</span>
+            <span class="pill">Audience Engagement</span>
+            <span class="pill">Business Development</span>
+            <span class="pill">MS Excel Modeling</span>
+            <span class="pill">Storytelling</span>
+          </div>
+        </div>
+
+        <!-- LANGUAGES -->
+        <div class="section">
+          <h2>Languages</h2>
+          <p class="p">English (Fluent)</p>
+          <p class="p">Indonesian (Fluent)</p>
+        </div>
+
+        <!-- ASSOCIATIONS -->
+        <div class="section">
+          <h2>Associations</h2>
+          <p class="p">
+            Mata Garuda Indonesian — National network of LPDP scholarship recipients collaborating on educational and community development initiatives across Indonesia.
+          </p>
+        </div>
+
+        <!-- INTERESTS -->
+        <div class="section">
+          <h2>Interests</h2>
+          <p class="p">Badminton • Cooking • Traveling</p>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:22px; font-size:12px;">
+      Last updated: <span id="updated"></span>
+    </p>
+
+  </div>
+
+  <script>
+    // Small convenience: show today's date automatically
+    const d = new Date();
+    document.getElementById("updated").textContent =
+      d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
+  </script>
 </body>
 </html>
